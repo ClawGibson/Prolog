@@ -1,6 +1,6 @@
 package src;
 
-import jpl.Query;
+import org.jpl7.Query;
 
 /**
  *
