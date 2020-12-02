@@ -1,6 +1,5 @@
 package src;
 
-import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import org.jpl7.Query;
 
@@ -140,7 +139,7 @@ public class Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sendDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendDataActionPerformed
-        
+
     }//GEN-LAST:event_sendDataActionPerformed
 
     private void helpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpActionPerformed
