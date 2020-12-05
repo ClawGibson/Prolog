@@ -18,7 +18,10 @@ public class Connection {
     public void Connection() {
 
     }
-
+        /**
+         * Debe de consultarse la base de conocimiento primero para que el
+         * sistema experto la conozca y pueda realizar las consultas.
+         */
     public static String Conn() {
         // Consulting file.
         String path = "consult('C:/Users/GamalielJakousi/Documents/GitHub/Prolog/TechnicalService/src/src/expertsystem.pl')";
@@ -29,7 +32,7 @@ public class Connection {
         return "consult KnowlegdeBase: " + " " + (q2.hasSolution() ? "true" : "false")
                 + "\nconsult ExpertSystem: " + " " + (q1.hasSolution() ? "true" : "false");
     }
-
+  
     public static void Results() {
         Query query = new Query("consulta.");
 
