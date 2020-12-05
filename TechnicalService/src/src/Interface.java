@@ -1,7 +1,8 @@
 package src;
 
-import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
+import org.jpl7.Term;
+import org.jpl7.Atom;
 import org.jpl7.Query;
 
 /**
@@ -13,6 +14,8 @@ public class Interface extends javax.swing.JFrame {
     public Interface() {
         initComponents();
         setLocationRelativeTo(null);
+        Connection con = new Connection();
+        JOptionPane.showMessageDialog(null, con.Conn());
     }
 
     @SuppressWarnings("unchecked")
@@ -32,6 +35,7 @@ public class Interface extends javax.swing.JFrame {
         title = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         help = new javax.swing.JButton();
+        jCheckBox10 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,7 +48,7 @@ public class Interface extends javax.swing.JFrame {
 
         jCheckBox1.setText("El CPU da pitidos");
 
-        jCheckBox2.setText("La PC se reinicia");
+        jCheckBox2.setText("La CPU se reinicia");
 
         jCheckBox3.setText("Pantallazo azul");
 
@@ -71,6 +75,8 @@ public class Interface extends javax.swing.JFrame {
             }
         });
 
+        jCheckBox10.setText("La PC se apaga");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -85,19 +91,22 @@ public class Interface extends javax.swing.JFrame {
                     .addComponent(sendData, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox1)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jCheckBox3))
-                        .addGap(31, 31, 31)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox4)
-                            .addComponent(jCheckBox5)
-                            .addComponent(jCheckBox6))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox9)
-                            .addComponent(jCheckBox8)
-                            .addComponent(jCheckBox7))
+                            .addComponent(jCheckBox10, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBox1)
+                                    .addComponent(jCheckBox2)
+                                    .addComponent(jCheckBox3))
+                                .addGap(31, 31, 31)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBox4)
+                                    .addComponent(jCheckBox5)
+                                    .addComponent(jCheckBox6))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBox9)
+                                    .addComponent(jCheckBox8)
+                                    .addComponent(jCheckBox7))))
                         .addGap(25, 25, 25)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -131,7 +140,9 @@ public class Interface extends javax.swing.JFrame {
                     .addComponent(jCheckBox3)
                     .addComponent(jCheckBox6)
                     .addComponent(jCheckBox9))
-                .addGap(65, 65, 65)
+                .addGap(18, 18, 18)
+                .addComponent(jCheckBox10)
+                .addGap(24, 24, 24)
                 .addComponent(sendData)
                 .addContainerGap(23, Short.MAX_VALUE))
         );
@@ -140,7 +151,8 @@ public class Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sendDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendDataActionPerformed
-
+        String answers = "";
+        Query query = new Query("consulta.");
     }//GEN-LAST:event_sendDataActionPerformed
 
     private void helpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpActionPerformed
@@ -185,6 +197,7 @@ public class Interface extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton help;
     private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox4;
