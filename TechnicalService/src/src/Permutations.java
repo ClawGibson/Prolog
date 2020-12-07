@@ -34,7 +34,7 @@ public class Permutations extends Connection {
     private boolean evaluar(String cad, int n) {
         String[] ar = cad.split("\\*");
         Conn();
-        if (ar.length == 4) {
+        if (ar.length > 3) {
             Query query = new Query("conocimiento(X,['" + ar[0] + "'," + "'" + ar[1] + "'," + "'" + ar[2] + "'," + "'" + ar[3] + "']).");
             if (query.hasSolution()) {
                 JOptionPane.showMessageDialog(null, query.nextSolution());
