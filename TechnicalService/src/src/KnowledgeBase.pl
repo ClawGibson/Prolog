@@ -3,14 +3,14 @@
  * Modelo: conocimiento(Diagnostico, ListaSintomas).
 */
 
-conocimiento('falla de la ram',
-['el cpu da pitidos', 'la computadora se reinicia',
-'muestra pantalla azul']).
-conocimiento('falla de la tarjeta madre',
-['la computadora no enciende', 'muestra pantalla azul',
- 'el cpu da pitidos','la computadora se apaga']).
-conocimiento('falla de la tarjeta de video',
-['el monitor no da señal','el cpu da pitidos',
- 'la imagen se ve borrosa en el monitor']).
-conocimiento('virus',
-['el cpu se reinicia', 'falta de informacion', 'lentitud en el uso de la computadora']).
+conocimiento('Falla de la ram',
+['El CPU da pitidos', 'La CPU se reinicia',
+'Pantallazo azul']).
+conocimiento('Falla de la tarjeta madre',
+['Computadora no enciende', 'Pantallazo azul',
+ 'El CPU da pitidos','La PC se apaga']).
+conocimiento('Falla de la tarjeta de video',
+['Monitor sin señal','El CPU da pitidos',
+ 'Imagen borrosa']).
+conocimiento('Virus',
+['La CPU se reinicia', 'Falta informacion', 'Lentitud']).
