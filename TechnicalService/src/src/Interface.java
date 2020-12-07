@@ -195,8 +195,10 @@ public class Interface extends javax.swing.JFrame {
         }
         if (resp.size() > 2) {
             verLista(resp);
-            Permutaciones per = new Permutaciones();
-            per.Perm2(verLista(resp), "", 3, verLista(resp).length, verLista(resp).length);
+            Permutations p = new Permutations();
+            if (!p.Perm2(verLista(resp), "", verLista(resp).length, verLista(resp).length, verLista(resp).length)) {
+                JOptionPane.showMessageDialog(null, "No hay información suficiente para hacer un diagnóstico :(");
+            }
             reset();
         } else {
             System.out.println("No hay suficiente información para realizar un diagnóstico :(");
